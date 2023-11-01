@@ -2,11 +2,10 @@
 import { Icon } from 'astro-icon'
 const {  rightMenu } = Astro.props;
 import Container from '../../components/Container.astro';
-
 ---
 <script type="module" >
   document.addEventListener('astro:page-load', () => {
-    const obeserver = new IntersectionObserver((entries) => {
+     const obeserver = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if(entry.isIntersecting) {
           entry.target.classList.add('show');
@@ -33,14 +32,14 @@ import Container from '../../components/Container.astro';
       <div class="baseline-close"></div>
     </span>
   </button>
-  <a class="header-logo__link" href="/fhg/">
+  <a class="header-logo__link" href="/fhg/sg">
     <slot name="logo">
     </slot>
   </a>
   </div>
   <div class="header-nav__container">
     <slot name="nav">
-  
+     
     </slot>
   </div>
   <div class="header-action-item__container hide">
