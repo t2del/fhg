@@ -68,12 +68,12 @@ import Container from '../../components/Container.astro';
             {navData.map(navItem => (
               <li className={navItem.submenu ? 'has-submenu' : ''}>
                 <a href={navItem.slug}>{navItem.title}</a>
-                {navItem.submenu && (
+                {navItem.(submenu: { submenu: any[]; slug: string | URL | null | undefined; title: unknown; }) && (
                   <ul class="sub-menu ">
                     {navItem.submenu.map(submenuItem => (
                       <li>
                         <a href={submenuItem.slug}>{submenuItem.title}</a>
-                      </li>
+                      </li>(: { slug: string | URL | null | undefined; title: unknown; })
                     ))}
                   </ul>
                 )}
