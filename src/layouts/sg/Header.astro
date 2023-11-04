@@ -1,9 +1,9 @@
 ---
 import { Icon } from 'astro-icon'
-const { navData, rightMenu } = Astro.props;
+const { navData, rightMenu, id } = Astro.props;
 import Container from '../../components/Container.astro';
 ---
-<header id="fhg" class={`${rightMenu ? "header--right" : ``.trim()}`}>
+<header id={id} class={`${rightMenu ? "header--right" : ``.trim()}`}>
   <Container className="container-header">
   <div class="header-logo-menu__container">
   <button id="menuButton" title="Open Main Menu">
