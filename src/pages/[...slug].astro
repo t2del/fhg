@@ -8,7 +8,7 @@ let [post] = await res.json();
 export async function getStaticPaths() {
   let data = await fetch("https://www.fullertonhealth.com/sg/wp-json/wp/v2/pages")
   let posts = await data.json();
-  return posts.map((post) => ({
+  return posts.map((post: { slug: any; }) => ({
     params: { slug: post.slug },
     props: { post: post },
   }));
