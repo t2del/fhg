@@ -1,6 +1,6 @@
 ---
 import { Icon } from 'astro-icon'
-const { navData, rightMenu, id } = Astro.props;
+const {  rightMenu, id } = Astro.props;
 import Container from '../../components/Container.astro';
 ---
 <header id={id} class={`${rightMenu ? "header--right" : ``.trim()}`}>
@@ -23,11 +23,11 @@ import Container from '../../components/Container.astro';
   </div>
   <div class="header-nav__container">
     <slot name="nav">
-      {navData && (
+      <!-- {navData && (
         <nav>
           <ul>
             {navData.map((navItem: NavItem) => ( // Specifying the type for navItem
-              <li className={navItem.submenu ? 'has-submenu' : ''}>
+              <li class={navItem.submenu ? 'has-submenu' : ''}>
                 <a href={navItem.slug}>{navItem.title}</a>
                 {navItem.submenu && (
                   <ul class="sub-menu"> {/* Fixed class attribute */}
@@ -42,7 +42,7 @@ import Container from '../../components/Container.astro';
             ))}
           </ul>
         </nav>
-      )}    
+      )}     -->
     </slot>
   </div>
   <div class="header-action-item__container hide">
