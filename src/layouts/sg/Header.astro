@@ -1,25 +1,9 @@
 ---
 import { Icon } from 'astro-icon'
-const {  rightMenu } = Astro.props;
+const { navData, rightMenu } = Astro.props;
 import Container from '../../components/Container.astro';
 ---
-<script type="module" >
-  document.addEventListener('astro:page-load', () => {
-     const obeserver = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if(entry.isIntersecting) {
-          entry.target.classList.add('show');
-        } else {
-          entry.target.classList.remove('show');
-        }
-      });
-    });
-    const hiddenElements = document.querySelectorAll('.notshow');
-    hiddenElements.forEach((el) => obeserver.observe(el));
-  }, );  
-</script>  
-
-<header id="fhgsg" class={`${rightMenu ? "header--right" : ``.trim()}`}>
+<header id="fhg" class={`${rightMenu ? "header--right" : ``.trim()}`}>
   <Container className="container-header">
   <div class="header-logo-menu__container">
   <button id="menuButton" title="Open Main Menu">
@@ -39,7 +23,26 @@ import Container from '../../components/Container.astro';
   </div>
   <div class="header-nav__container">
     <slot name="nav">
-     
+      {navData && (
+        <nav>
+          <ul>
+            {navData.map(navItem => (
+              <li className={navItem.submenu ? 'has-submenu' : ''}>
+                <a href={navItem.slug}>{navItem.title}</a>
+                {navItem.submenu && (
+                  <ul class="sub-menu ">
+                    {navItem.submenu.map(submenuItem => (
+                      <li>
+                        <a href={submenuItem.slug}>{submenuItem.title}</a>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </li>
+            ))}            
+          </ul>
+        </nav>
+      )}      
     </slot>
   </div>
   <div class="header-action-item__container hide">

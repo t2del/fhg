@@ -3,10 +3,6 @@ export const navGroup = [
 	  title: 'Home',
 	  slug: '/fhg/',
 	},
-	// {
-	//   title: 'About',
-	//   slug: '/fhg/about',
-	// },
 	{
 	  title: 'Blog',
 	  slug: '/fhg/blog',
@@ -32,10 +28,14 @@ export const navGroup = [
 	{
 		title: 'Contact',
 		slug: '/fhg/contact-us',
-	  },
-  ];
+	},
+	{
+		title: 'SG',
+		slug: '/fhg/sg/',
+	},
+];
 
-  export const navSG = [
+export const navSG = [
 	{
 	  title: 'Home',
 	  slug: '/fhg/sg',
@@ -69,6 +69,10 @@ export const navGroup = [
 	{
 		title: 'Contact',
 		slug: '/fhg/sg/contact-us',
-	  },
+	},
+	{
+		title: 'Group',
+		slug: './',
+	},
   ];
 
