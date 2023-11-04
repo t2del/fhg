@@ -3,22 +3,6 @@ import { Icon } from 'astro-icon'
 const {  rightMenu } = Astro.props;
 import Container from '../../components/Container.astro';
 ---
-<script type="module" >
-  document.addEventListener('astro:page-load', () => {
-     const obeserver = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if(entry.isIntersecting) {
-          entry.target.classList.add('show');
-        } else {
-          entry.target.classList.remove('show');
-        }
-      });
-    });
-    const hiddenElements = document.querySelectorAll('.notshow');
-    hiddenElements.forEach((el) => obeserver.observe(el));
-  }, );  
-</script>  
-
 <header id="t2delHeader" class={`${rightMenu ? "header--right" : ``.trim()}`}>
   <Container className="container-header">
   <div class="header-logo-menu__container">

@@ -54,3 +54,18 @@ const { title, description, image = '/favicon.ico' } = Astro.props;
 	}, ); 
 </script>
 
+<script type="module" >
+	document.addEventListener('astro:page-load', () => {
+	   const obeserver = new IntersectionObserver((entries) => {
+		entries.forEach((entry) => {
+		  if(entry.isIntersecting) {
+			entry.target.classList.add('show');
+		  } else {
+			entry.target.classList.remove('show');
+		  }
+		});
+	  });
+	  const hiddenElements = document.querySelectorAll('.notshow');
+	  hiddenElements.forEach((el) => obeserver.observe(el));
+	}, );  
+  </script>  

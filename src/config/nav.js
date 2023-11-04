@@ -1,4 +1,4 @@
-export const nav = [
+export const navGroup = [
 	{
 	  title: 'Home',
 	  slug: '/fhg/',
