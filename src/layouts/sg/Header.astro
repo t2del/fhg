@@ -26,23 +26,23 @@ import Container from '../../components/Container.astro';
       {navData && (
         <nav>
           <ul>
-            {navData.map(navItem => (
+            {navData.map((navItem: NavItem) => ( // Specifying the type for navItem
               <li className={navItem.submenu ? 'has-submenu' : ''}>
                 <a href={navItem.slug}>{navItem.title}</a>
                 {navItem.submenu && (
-                  <ul class="sub-menu ">
-                    {navItem.submenu.map(submenuItem => (
-                      <li>
+                  <ul class="sub-menu"> {/* Fixed class attribute */}
+                    {navItem.submenu.map((submenuItem: SubmenuItem) => ( // Specifying the type for submenuItem
+                      <li key={submenuItem.slug}> {/* Added key attribute for React rendering */}
                         <a href={submenuItem.slug}>{submenuItem.title}</a>
                       </li>
                     ))}
                   </ul>
                 )}
               </li>
-            ))}            
+            ))}
           </ul>
         </nav>
-      )}      
+      )}    
     </slot>
   </div>
   <div class="header-action-item__container hide">

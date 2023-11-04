@@ -11,37 +11,37 @@ interface Props {
 	meta_description: string;
 	body_class: string;
 }
-// Define types for the structure of the navigation items
 type SubmenuItem = {
   slug: string;
   title: string;
 };
+
 type NavItem = {
   slug: string;
   title: string;
-  submenu?: SubmenuItem[]; // Optional submenu
+  submenu?: SubmenuItem[]; // Fixed the definition of submenu
 };
-// Assuming navData is an array of NavItem types
+
 const navData: NavItem[] = [
-  	{
-		title: 'Home',
-		slug: '/fhg/sg',
-		submenu: [
-			{
-				title: 'Sub-Home',
-				slug: '/fhg/sg/home',
-			},
-		// ...more submenu items
-		],
-	},
-	{
-		title: 'Blog',
-		slug: '/fhg/sg/blog/',
-  	},
-  	{
-		title: 'Group',
-		slug: './',
-	},
+  {
+    title: 'Home',
+    slug: '/fhg/sg',
+    submenu: [
+      {
+        title: 'Sub-Home',
+        slug: '/fhg/sg/home',
+      },
+      // ...more submenu items
+    ],
+  },
+  {
+    title: 'Blog',
+    slug: '/fhg/sg/blog/',
+  },
+  {
+    title: 'Group',
+    slug: './',
+  },
 ];
 
 const { title, meta_description, body_class } = Astro.props;
