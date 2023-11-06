@@ -17,14 +17,20 @@ import Container from '../../components/Container.astro';
       <div class="baseline-close"></div>
     </span>
   </button>
-  <a class="header-logo__link" href="/fhg/sg">
+  <a class="header-logo__link" href="/fhg/">
     <slot name="logo">
     </slot>
   </a>
   </div>
   <div class="header-nav__container"></div>
-  <div class="header-action-item__container hide">
+  <div class="header-action-item__container">
     <slot name="action-item">
+      <nav>
+        <ul>
+          <li class=""><a href="/fhg/">Home</a></li>
+          <li class=""><a href="/fhg/sg/">SG</a>        
+        </ul>
+      </nav>
     </slot>
   </div>
 </Container>

@@ -1,13 +1,13 @@
 ---
-import Layout from '../layouts/group/Layout.astro';
-import Container from '../components/Container.astro';
+import Layout from '../../../layouts/sg/Layout.astro';
+import Container from '../../../components/Container.astro';
 ---
-<Layout title="Fullerton Health - 404 Not Found" meta_description="Fullerton Health - 404 Not Found" body_class="404 not-found">
+<Layout title="Fullerton Health Singapore - 404 Not Found" meta_description="Fullerton Health Singapore - 404 Not Found" body_class="404 not-found">
 	<section class="section-404">
 		<Container className="container-about">
 			<h1>404</h1>
 			<h2>Page Not Found 👀</h2>
-			{Astro.url.origin}
+			<a href="/fhg/sg/">Home</a>		
 		</Container>
 	</section>
 </Layout>
