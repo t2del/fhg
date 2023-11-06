@@ -1,0 +1,55 @@
+---
+import Layout from '../../layouts/sg/Layout.astro';
+
+import { wpquery } from '../../data/wordpress';
+
+export async function getStaticPaths() {
+  const data = await wpquery({
+    query: `
+    query LoadAllPosts {
+        posts {
+          nodes {
+            title
+            slug
+            featuredImage {
+              node {
+                mediaItemUrl
+                srcSet
+                sizes
+                altText
+              }
+            }
+            content(format: RENDERED)
+            author {
+              node {
+                name
+              }
+            }
+          }
+        }
+      }
+    `,
+  });
+
+  return data.posts.nodes.map((post: any) => {
+    return {
+      params: { slug: post.slug },
+      props: { post },
+    };
+  });
+}
+
+const { post } = Astro.props;
+console.log(post)
+---
+<!-- <Layout title={`${post.title.rendered} ` } meta_description={`${post.yoast_head_json.description}` } body_class={`wp blog-inner ${post.title.rendered}` }> -->
+<Layout>  
+	<article>
+    <h1>{post.title}</h1>
+    <p class="byline">Written by {post.author.node.name}</p>
+    <Fragment set:html={post.content} />
+    <p>
+      <a href="/">&larr; back to all posts</a>
+    </p>
+  </article>
+</Layout>
