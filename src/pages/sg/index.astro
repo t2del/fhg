@@ -1,11 +1,19 @@
 ---
 import Layout from '../../layouts/sg/Layout.astro';
-import Container from '../../components/Container.astro';
+const { slug = 'home' } = Astro.params;
+let res = await fetch(`https://www.fullertonhealth.com/sg/wp-json/wp/v2/pages?slug=${slug}`);
+let [post] = await res.json();
+// The getStaticPaths() is required for static Astro sites.
+// If using SSR, you will not need this function.
+export async function getStaticPaths() {
+  let data = await fetch("https://www.fullertonhealth.com/sg/wp-json/wp/v2/pages")
+  let posts = await data.json();
+  return posts.map((post: { slug: any; }) => ({
+    params: { slug: post.slug },
+    props: { post: post },
+  }));
+}
 ---
-<Layout title="Fullerton Health Singapore" meta_description="Fullerton Health Singapore" body_class="home">
-	<section id="Home">
-		<Container className="container-about">
-			<h2 class="notshow fromleft">About <span class="text-gradient">Fullerton Health Singapore</span></h2>				
-		</Container>
-	</section>
+<Layout title={`${post.title.rendered} ` } meta_description={`${post.yoast_head_json.description}` } body_class={`wp blog-inner ${post.title.rendered}` }>
+   	<Fragment set:html={post.content.rendered} />
 </Layout>

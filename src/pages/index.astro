@@ -15,7 +15,5 @@ export async function getStaticPaths() {
 }
 ---
 <Layout title={`${post.title.rendered} ` } meta_description={`${post.yoast_head_json.description}` } body_class={`wp blog-inner ${post.title.rendered}` }>
-	<article>
-    <Fragment set:html={post.content.rendered} />
-</article>
+  <Fragment set:html={post.content.rendered} />
 </Layout>
