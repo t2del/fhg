@@ -40,16 +40,14 @@ export async function getStaticPaths() {
 }
 
 const { post } = Astro.props;
-console.log(post)
+
 ---
 <!-- <Layout title={`${post.title.rendered} ` } meta_description={`${post.yoast_head_json.description}` } body_class={`wp blog-inner ${post.title.rendered}` }> -->
-<Layout>  
+<Layout  title='Test' meta_description='Test' body_class='Test'>  
 	<article>
     <h1>{post.title}</h1>
-    <p class="byline">Written by {post.author.node.name}</p>
-    <Fragment set:html={post.content} />
     <p>
-      <a href="/">&larr; back to all posts</a>
+      <a href="/fhg/index2/">&larr; back to all posts</a>
     </p>
   </article>
 </Layout>
