@@ -407,3 +407,7 @@ section {
 	line-height: 30px;
 	word-spacing: 5px;
   }
+
+body.not-found-404 .header-action-item__container {
+	display: none;
+}  

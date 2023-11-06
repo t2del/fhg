@@ -2,12 +2,12 @@
 import Layout from '../layouts/group/Layout.astro';
 import Container from '../components/Container.astro';
 ---
-<Layout title="Fullerton Health - 404 Not Found" meta_description="Fullerton Health - 404 Not Found" body_class="404 not-found">
+<Layout title="Fullerton Health - 404 Not Found" meta_description="Fullerton Health - 404 Not Found" body_class="not-found-404 404">
 	<section class="section-404">
 		<Container className="container-about">
 			<h1>404</h1>
 			<h2>Page Not Found 👀</h2>
-			{Astro.url.origin}
+			<a href="javascript: history.back()">Go back</a>
 		</Container>
 	</section>
 </Layout>
@@ -75,7 +75,7 @@ import Container from '../components/Container.astro';
 		gap: 2rem;
 		padding: 0;
 	}
-	body.404 .header-nav__container {
+	body.not-found-404 .header-action-item__container {
 		display: none;
 	}
 </style>

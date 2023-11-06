@@ -1,8 +1,10 @@
 ---
 import Layout from '../../layouts/sg/Layout.astro';
 const { slug } = Astro.params;
+const modifiedSlug = slug.replace('/sg/', '');
 
-let res = await fetch(`https://www.fullertonhealth.com/sg/wp-json/wp/v2/pages?slug=${slug}`);
+
+let res = await fetch(`https://www.fullertonhealth.com/sg/wp-json/wp/v2/pages?slug=${modifiedSlug}`);
 
 let [post] = await res.json();
 
