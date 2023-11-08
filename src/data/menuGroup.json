@@ -2,32 +2,69 @@
   {
       "name": "Home",
       "url": "/fhg/",
-      "submenu": [
-        {
-          "name": "Home",
-          "url": "#"
-        },
-        {
-          "name": "Home 2",
-          "url": "#"
-        }
-      ]
+      "status" : "active"
   },
   {
-    "name": "About",
-    "url": "/fhg/about/"
+    "name": "About Us",
+    "url": "/fhg/about/",
+    "status" : "active",
+    "submenu": [
+      {
+        "name": "Who we are",
+        "url": "/fhg/about-us",
+        "status" : "active"
+      },
+      {
+        "name": "What We Do",
+        "url": "/fhg/what-we-do",
+        "status" : "active"
+      },
+      {
+        "name": "Our Purpose and Shared values",
+        "url": "/fhg/our-purpose-and-shared-values",
+        "status" : "active"
+      },
+      {
+        "name": "Management team",
+        "url": "/fhg/management-team",
+        "status" : "active"
+      },
+      {
+        "name": "BOARD OF DIRECTORS",
+        "url": "/fhg/board-of-directors",
+        "status" : "active"
+      }      
+    ]
+  },
+  {
+    "name": "community",
+    "url": "/fhg/community",
+    "status" : "active"
+  },
+  {
+    "name": "sustainability",
+    "url": "/fhg/sustainability",
+    "status" : "active"
+  },
+  {
+    "name": "contact us",
+    "url": "/fhg/contact-us",
+    "status" : "active"
   },
   {
       "name": "Country",
       "url": "#",
+      "status" : "active",
       "submenu": [
         {
           "name": "SG",
-          "url": "/fhg/sg/"
+          "url": "/fhg/sg/",
+          "status" : "active"
         },
         {
           "name": "PH",
-          "url": "/fhg/ph/"
+          "url": "/fhg/ph/",
+          "status" : "active"
         }
       ]
   }

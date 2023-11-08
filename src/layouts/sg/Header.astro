@@ -2,6 +2,7 @@
 import { Icon } from 'astro-icon'
 const {  rightMenu, id } = Astro.props;
 import Container from '../../components/Container.astro';
+import menugroup from '../../data/menuSG.json';
 ---
 <header id={id} class={`${rightMenu ? "header--right" : ``.trim()}`}>
   <Container className="container-header">
@@ -25,8 +26,20 @@ import Container from '../../components/Container.astro';
   <div class="header-nav__container">
     <nav>
       <ul>
-        <li class=""><a href="/fhg/sg/">Home</a></li>
-        <li class=""><a href="/fhg/">Group</a>        
+        {menugroup.map(menuGroup => (
+          <li class={menuGroup.submenu ? 'has-submenu' : ''}>
+            <a href={menuGroup.url}>{menuGroup.name}</a>
+            {menuGroup.submenu && (
+              <ul class="sub-menu ">
+                {menuGroup.submenu.map(submenuItem => (
+                  <li>
+                    <a href={submenuItem.url}>{submenuItem.name}</a>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </li>
+        ))}
       </ul>
     </nav>
   </div>

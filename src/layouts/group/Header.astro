@@ -27,15 +27,8 @@ import menugroup from '../../data/menuGroup.json';
     <slot name="action-item">
       <nav>
         <ul>
-          <!-- {
-            menugroup.map((menuGroup) => {
-              return (
-                <li class={menuGroup.submenu? 'has-submenu' : '' }><a href={menuGroup.url}>{menuGroup.name}</a></li>                        
-              );              
-            })
-          }       -->
           {menugroup.map(menuGroup => (
-            <li class={menuGroup.submenu ? 'has-submenu' : ''}>
+            <li class={`${menuGroup.submenu ? 'has-submenu' : '' }  ${menuGroup.status}`} >
               <a href={menuGroup.url}>{menuGroup.name}</a>
               {menuGroup.submenu && (
                 <ul class="sub-menu ">
