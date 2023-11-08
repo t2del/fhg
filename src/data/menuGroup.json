@@ -1,0 +1,34 @@
+[
+  {
+      "name": "Home",
+      "url": "/fhg/",
+      "submenu": [
+        {
+          "name": "Home",
+          "url": "#"
+        },
+        {
+          "name": "Home 2",
+          "url": "#"
+        }
+      ]
+  },
+  {
+    "name": "About",
+    "url": "/fhg/about/"
+  },
+  {
+      "name": "Country",
+      "url": "#",
+      "submenu": [
+        {
+          "name": "SG",
+          "url": "/fhg/sg/"
+        },
+        {
+          "name": "PH",
+          "url": "/fhg/ph/"
+        }
+      ]
+  }
+]
