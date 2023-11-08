@@ -1,8 +1,99 @@
 [
   {
-      "name": "Home",
-      "url": "/fhg/sg/",
-      "status" : "active"
+    "name": "About Us",
+    "url": "#",
+    "status" : "active",
+    "submenu": [
+      {
+        "name": "Who We Are",
+        "url": "/fhg/sg/who-we-are",
+        "status" : "active"
+      },
+      {
+        "name": "Awards & Accolades",
+        "url": "/fhg/sg/awards-accolades",
+        "status" : "active"
+      }
+    ]
+  },
+  {
+    "name": "Services",
+    "url": "/fhg/sg/",
+    "status" : "active",
+    "submenu": [
+      {
+        "name": "GP",
+        "url": "/fhg/sg/primary-care",
+        "status" : "active"
+      },
+      {
+        "name": "Specialty Care",
+        "url": "/fhg/sg/specialty-care",
+        "status" : "active"
+      },
+      {
+        "name": "Migrant Worker Care",
+        "url": "#",
+        "status" : "active"
+      },
+      {
+        "name": "Digital Services",
+        "url": "#",
+        "status" : "active"
+      },
+      {
+        "name": "Network Management",
+        "url": "/fhg/sg/network-management",
+        "status" : "active"
+      },
+      {
+        "name": "Subsidiaries",
+        "url": "#",
+        "status" : "active"
+      },
+      {
+        "name": "Covid-19",
+        "url": "#",
+        "status" : "active"
+      }
+    ]
+  },
+  {
+    "name": "Healthcare Screening",
+    "url": "/fhg/sg/executive-health-screening",
+    "status" : "active"
+  },
+  {
+    "name": "Healthier SG",
+    "url": "/fhg/sg/healthier-sg",
+    "status" : "active"
+  },
+  {
+    "name": "News",
+    "url": "#",
+    "status" : "active"
+  },
+  {
+    "name": "Career",
+    "url": "/fhg/sg/careers",
+    "status" : "active"
+  },
+  {
+    "name": "Contact",
+    "url": "#",
+    "status" : "active",
+    "submenu": [
+      {
+        "name": "Contact Us",
+        "url": "/fhg/sg/contact-us",
+        "status" : "active"
+      },
+      {
+        "name": "Locate a Clinic",
+        "url": "/fhg/sg/locate-a-clinic",
+        "status" : "active"
+      }
+    ]
   },
   {
       "name": "Country",
