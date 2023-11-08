@@ -8,7 +8,6 @@ import Logo from '../../components/logo/Logo.astro';
 
 const { title, meta_description, body_class } = Astro.props;
 ---
-
 <!doctype html>
 <html lang="en" >
 	<head>
@@ -16,7 +15,7 @@ const { title, meta_description, body_class } = Astro.props;
 	</head>
 
 	<body class={body_class}>
-		<Header rightMenu  slot="header">
+		<Header slot="header">
 			<span slot="logo">
 				<Logo />
 			</span>

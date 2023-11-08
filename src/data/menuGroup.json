@@ -65,11 +65,6 @@
           "name": "SG",
           "url": "/fhg/sg/",
           "status" : "active"
-        },
-        {
-          "name": "PH",
-          "url": "/fhg/ph/",
-          "status" : "active"
         }
       ]
   }
