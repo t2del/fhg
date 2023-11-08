@@ -147,5 +147,8 @@ header .content__container.container-header{
       padding: 5px 5px;
       box-shadow: none;
      }
-
+     nav ul li.has-submenu .sub-menu {
+      height: 100%;
+      opacity: 1;
+     }
   }
