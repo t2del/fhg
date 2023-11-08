@@ -97,4 +97,32 @@ const { title, description, image = '/favicon.ico' } = Astro.props;
 			}
 		}
 	}, );  
-</script> 	
+</script>
+
+
+<script type="module" >
+	document.addEventListener('astro:page-load', () => {
+		window.onload = function() {
+			// Get the height of the section1
+			const section1 = document.getElementById('navHeader');
+			const section1Height = section1.offsetHeight;
+			applyHeightToSection2(section1Height);
+		};
+		window.onscroll = function() {
+			// Get the height of the section1
+			const section1 = document.getElementById('navHeader');
+			const section1Height = section1.offsetHeight;
+			applyHeightToSection2(section1Height);
+		};
+
+		function applyHeightToSection2(height) {
+			console.log(height);
+			// Apply the height to section2
+			const section2 = document.querySelector('body');
+			
+			if (section2) {
+				section2.style.paddingTop = height + 'px';
+			}
+		}
+	}); 
+</script>
