@@ -72,14 +72,19 @@ const { title, description, image = '/favicon.ico' } = Astro.props;
 
 <script type="module" >
 	document.addEventListener('astro:page-load', () => {
-		const menuButton = document.getElementById('#menuButton');
-		const navHeader = document.getElementById('#navHeader');
-		const menuButtonIconHam = document.getElementById('#menuButtonIconHam');
-		const menuButtonIconClose = document.getElementById('#menuButtonIconClose');
+		// const menuButton = document.getElementById('#menuButton');
+		// const navHeader = document.getElementById('#navHeader');
+		// const menuButtonIconHam = document.getElementById('#menuButtonIconHam');
+		// const menuButtonIconClose = document.getElementById('#menuButtonIconClose');
+		const menuButton = document.querySelector('#menuButton')
+		const navHeader = document.querySelector('#navHeader');
+		const menuButtonIconHam = document.querySelector('#menuButtonIconHam');
+		const menuButtonIconClose = document.querySelector('#menuButtonIconClose');
 
 		if (menuButton) {
 			menuButton.addEventListener('click', toggleMenu);
 		}
+		
 		function toggleMenu() {
 			if (menuButtonIconHam) {
 				menuButtonIconHam.toggleAttribute('hidden');
