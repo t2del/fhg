@@ -6,7 +6,7 @@
   },
   {
     "name": "About Us",
-    "url": "/fhg/about/",
+    "url": "#",
     "status" : "active",
     "submenu": [
       {
@@ -33,7 +33,12 @@
         "name": "BOARD OF DIRECTORS",
         "url": "/fhg/board-of-directors",
         "status" : "active"
-      }      
+      },
+      {
+        "name": "Our Milestone",
+        "url": "/fhg/our-milestones",
+        "status" : "active"
+      }    
     ]
   },
   {

@@ -1,10 +1,10 @@
 ---
 import { Icon } from 'astro-icon'
-const {  rightMenu, id } = Astro.props;
+const {  rightMenu } = Astro.props;
 import Container from '../../components/Container.astro';
 import menugroup from '../../data/menuGroup.json';
 ---
-<header id={id} class={`${rightMenu ? "header--right" : ``.trim()}`}>
+<header id="navHeader" class={`${rightMenu ? "header--right" : ``.trim()}`}>
   <Container className="container-header">
   <div class="header-logo-menu__container">
   <button id="menuButton" title="Open Main Menu">
@@ -22,9 +22,8 @@ import menugroup from '../../data/menuGroup.json';
     </slot>
   </a>
   </div>
-  <div class="header-nav__container"></div>
-  <div class="header-action-item__container">
-    <slot name="action-item">
+  <div class="header-nav__container">
+    <slot name="nav">
       <nav>
         <ul>
           {menugroup.map(menuGroup => (
@@ -42,7 +41,11 @@ import menugroup from '../../data/menuGroup.json';
             </li>
           ))}
         </ul>
-      </nav>
+      </nav>    
+    </slot>
+  </div>
+  <div class="header-action-item__container hide">
+    <slot name="action-item">
     </slot>
   </div>
 </Container>
