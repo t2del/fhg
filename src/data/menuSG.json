@@ -1,27 +1,23 @@
 [
   {
       "name": "Home",
-      "url": "/fhg/sg/"
-  },
-  {
-    "name": "About",
-    "url": "/fhg/sg/about/"
+      "url": "/fhg/sg/",
+      "status" : "active"
   },
   {
       "name": "Country",
       "url": "#",
+      "status" : "active",
       "submenu": [
         {
           "name": "Group",
-          "url": "/fhg/"
+          "url": "/fhg/",
+          "status" : "active"
         },
         {
-          "name": "SG",
-          "url": "/fhg/sg/"
-        },
-        {
-          "name": "PH",
-          "url": "/fhg/ph/"
+          "name": "Singapore",
+          "url": "/fhg/sg/",
+          "status" : "active"
         }
       ]
   }

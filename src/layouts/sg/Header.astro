@@ -1,10 +1,9 @@
 ---
 import { Icon } from 'astro-icon'
-const {  rightMenu, id } = Astro.props;
 import Container from '../../components/Container.astro';
-import menugroup from '../../data/menuSG.json';
+import menusg from '../../data/menuSG.json';
 ---
-<header id={id} class={`${rightMenu ? "header--right" : ``.trim()}`}>
+<header id="navHeader" class="header--right white-bg">
   <Container className="container-header">
   <div class="header-logo-menu__container">
   <button id="menuButton" title="Open Main Menu">
@@ -17,31 +16,36 @@ import menugroup from '../../data/menuSG.json';
       <div class="baseline-close"></div>
     </span>
   </button>
-  <a class="header-logo__link" href="/fhg/sg">
+  <a class="header-logo__link" href="/fhg/">
     <slot name="logo">
     </slot>
   </a>
   </div>
-  <div class="header-nav__container"> </div>
   <div class="header-nav__container">
-    <nav>
-      <ul>
-        {menugroup.map(menuGroup => (
-          <li class={menuGroup.submenu ? 'has-submenu' : ''}>
-            <a href={menuGroup.url}>{menuGroup.name}</a>
-            {menuGroup.submenu && (
-              <ul class="sub-menu ">
-                {menuGroup.submenu.map(submenuItem => (
-                  <li>
-                    <a href={submenuItem.url}>{submenuItem.name}</a>
-                  </li>
-                ))}
-              </ul>
-            )}
-          </li>
-        ))}
-      </ul>
-    </nav>
+    <slot name="nav">
+      <nav>
+        <ul>
+          {menusg.map(menuSG => (
+            <li class={`${menuSG.submenu ? 'has-submenu' : '' }  ${menuSG.status}`} >
+              <a href={menuSG.url}>{menuSG.name}</a>
+              {menuSG.submenu && (
+                <ul class="sub-menu ">
+                  {menuSG.submenu.map(submenuItem => (
+                    <li>
+                      <a href={submenuItem.url}>{submenuItem.name}</a>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </li>
+          ))}
+        </ul>
+      </nav>    
+    </slot>
+  </div>
+  <div class="header-action-item__container hide">
+    <slot name="action-item">
+    </slot>
   </div>
 </Container>
 </header>

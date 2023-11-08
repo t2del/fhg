@@ -62,7 +62,7 @@
       "status" : "active",
       "submenu": [
         {
-          "name": "SG",
+          "name": "Singapore",
           "url": "/fhg/sg/",
           "status" : "active"
         }
