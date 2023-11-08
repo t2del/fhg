@@ -72,26 +72,24 @@ const { title, description, image = '/favicon.ico' } = Astro.props;
 
 <script type="module" >
 	document.addEventListener('astro:page-load', () => {
-		const menuButton = document.querySelector('#menuButton')
-		const navHeader = document.querySelector('#navHeader');
-		const menuButtonIconHam = document.querySelector('#menuButtonIconHam');
-		const menuButtonIconClose = document.querySelector('#menuButtonIconClose');
+		const menuButton = document.getElementById('#menuButton');
+		const navHeader = document.getElementById('#navHeader');
+		const menuButtonIconHam = document.getElementById('#menuButtonIconHam');
+		const menuButtonIconClose = document.getElementById('#menuButtonIconClose');
 
-		menuButton.addEventListener('click', toggleMenu);
-		function toggleMenu() {
-		menuButtonIconHam.toggleAttribute('hidden');
-		menuButtonIconClose.toggleAttribute('hidden');
-		navHeader.toggleAttribute('mobile-menu-open');
+		if (menuButton) {
+			menuButton.addEventListener('click', toggleMenu);
 		}
-		const scrollingElement = document.querySelector('header');
-
-		window.addEventListener('scroll', () => {
-			const scrollPercentage = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
-			if (scrollPercentage > 1) {
-				scrollingElement.classList.add("white-bg"); // White background
-			} else {
-				scrollingElement.classList.remove("white-bg"); // Default background
+		function toggleMenu() {
+			if (menuButtonIconHam) {
+				menuButtonIconHam.toggleAttribute('hidden');
 			}
-		});
+			if (menuButtonIconClose) {
+				menuButtonIconClose.toggleAttribute('hidden');
+			}
+			if (navHeader) {
+				navHeader.toggleAttribute('mobile-menu-open');
+			}
+		}
 	}, );  
 </script> 	

@@ -4,7 +4,7 @@ const {  rightMenu } = Astro.props;
 import Container from '../../components/Container.astro';
 import menugroup from '../../data/menuGroup.json';
 ---
-<header id="navHeader" class={`${rightMenu ? "header--right" : ``.trim()}`}>
+<header id="navHeader" class={`${rightMenu ? "header--right white-bg" : ``.trim()}`}>
   <Container className="container-header">
   <div class="header-logo-menu__container">
   <button id="menuButton" title="Open Main Menu">
