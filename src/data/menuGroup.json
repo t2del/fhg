@@ -1,10 +1,5 @@
 [
   {
-      "name": "Home",
-      "url": "/fhg/",
-      "status" : "active"
-  },
-  {
     "name": "About Us",
     "url": "#",
     "status" : "active",
