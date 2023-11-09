@@ -411,3 +411,8 @@ section {
 body.not-found-404 .header-action-item__container {
 	display: none;
 }  
+
+
+.wp-page .azure {
+    display: none !important;
+}
