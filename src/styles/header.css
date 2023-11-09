@@ -78,6 +78,7 @@ header .content__container.container-header{
     color: inherit;
     opacity: 0.72;
     transition: opacity linear 150ms;
+    text-transform: uppercase;
   }
   nav ul li a:hover {
     opacity: 1;
