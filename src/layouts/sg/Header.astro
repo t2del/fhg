@@ -1,38 +1,48 @@
 ---
 import { Icon } from 'astro-icon'
 import Container from '../../components/Container.astro';
-import menusg from '../../data/menuSG.json';
+import menuData from '../../data/menuSG.json';
 ---
 <header id="navHeader" class="header--right white-bg">
   <Container className="container-header">
   <div class="header-logo-menu__container">
-  <button id="menuButton" title="Open Main Menu">
-    <span id="menuButtonIconHam">
-        <div class="baseline-menu"></div>
-      <Icon name="ic:baseline-menu" width="24px" height="24px" />
-    </span>
-    <span id="menuButtonIconClose" hidden>
-      <Icon name="ic:baseline-close" width="24px" height="24px" />
-      <div class="baseline-close"></div>
-    </span>
-  </button>
-  <a class="header-logo__link" href="/fhg/sg/">
-    <slot name="logo">
-    </slot>
-  </a>
+    <a class="header-logo__link" href="/fhg/sg/">
+      <slot name="logo">
+      </slot>
+    </a>
+    <button id="menuButton" title="Open Main Menu">
+      <span id="menuButtonIconHam">
+          <div class="baseline-menu"></div>
+        <Icon name="ic:baseline-menu" width="24px" height="24px" />
+      </span>
+      <span id="menuButtonIconClose" hidden>
+        <Icon name="ic:baseline-close" width="24px" height="24px" />
+        <div class="baseline-close"></div>
+      </span>
+    </button>
+    
   </div>
   <div class="header-nav__container">
     <slot name="nav">
       <nav>
         <ul>
-          {menusg.map(menuSG => (
-            <li class={`${menuSG.submenu ? 'has-submenu' : '' }  ${menuSG.status}`} >
-              <a href={menuSG.url}>{menuSG.name}</a>
-              {menuSG.submenu && (
-                <ul class="sub-menu ">
-                  {menuSG.submenu.map(submenuItem => (
-                    <li>
+          {menuData.map(menu => (
+            <li class={`${menu.submenu ? 'has-submenu' : '' }  ${menu.status}`} >
+              <a href={menu.url}>{menu.name}</a>
+              {menu.submenu && (
+                <ul class="sub-menu-1 sub-menu">
+                  {menu.submenu.map(submenuItem => (
+                    <li  class={`${submenuItem.submenu ? 'has-submenu' : '' }  ${submenuItem.status}`} >
                       <a href={submenuItem.url}>{submenuItem.name}</a>
+                      {submenuItem.submenu && (
+                        <ul class="sub-menu-2 sub-menu">
+                          {submenuItem.submenu.map(subSubmenuItem => (
+                            <li>
+                              <a href={subSubmenuItem.url}>{subSubmenuItem.name}</a>
+                            </li>
+                          ))}
+                        </ul>
+                      )}
                     </li>
                   ))}
                 </ul>

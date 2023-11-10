@@ -29,7 +29,7 @@ import menugroup from '../../data/menuGroup.json';
             <li class={`${menuGroup.submenu ? 'has-submenu' : '' }  ${menuGroup.status}`} >
               <a href={menuGroup.url}>{menuGroup.name}</a>
               {menuGroup.submenu && (
-                <ul class="sub-menu ">
+                <ul class="sub-menu">
                   {menuGroup.submenu.map(submenuItem => (
                     <li>
                       <a href={submenuItem.url}>{submenuItem.name}</a>

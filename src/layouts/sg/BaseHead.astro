@@ -1,6 +1,5 @@
 ---
 import { ViewTransitions } from 'astro:transitions';
-
 interface Props {
 	title: string;
 	description: string;
@@ -51,23 +50,20 @@ const { title, description, image = '/favicon.ico' } = Astro.props;
 
 <script type="module" >
 	document.addEventListener('astro:page-load', () => {
-	   const obeserver = new IntersectionObserver((entries) => {
+	   	const obeserver = new IntersectionObserver((entries) => {
 		entries.forEach((entry) => {
-		  if(entry.isIntersecting) {
-			entry.target.classList.add('show');
-		  } else {
-			entry.target.classList.remove('show');
-		  }
+		  	if(entry.isIntersecting) {
+				entry.target.classList.add('show');
+		  	} else {
+				entry.target.classList.remove('show');
+		  	}
+			});
 		});
-	  });
-	  const hiddenElements = document.querySelectorAll('.notshow');
-	  hiddenElements.forEach((el) => obeserver.observe(el));
-	}, );  
-</script>  
+		const hiddenElements = document.querySelectorAll('.notshow');
+		hiddenElements.forEach((el) => obeserver.observe(el));
 
-<script type="module" >
-	document.addEventListener('astro:page-load', () => {
-		const menuButton = document.querySelector('#menuButton')
+	  	const menuButton = document.querySelector('#menuButton');
+		const body = document.querySelector('body');
 		const navHeader = document.querySelector('#navHeader');
 		const menuButtonIconHam = document.querySelector('#menuButtonIconHam');
 		const menuButtonIconClose = document.querySelector('#menuButtonIconClose');
@@ -83,9 +79,21 @@ const { title, description, image = '/favicon.ico' } = Astro.props;
 			if (menuButtonIconClose) {
 				menuButtonIconClose.toggleAttribute('hidden');
 			}
+			if (body) {
+				body.toggleAttribute('mobile-menu-open');
+			}
 			if (navHeader) {
 				navHeader.toggleAttribute('mobile-menu-open');
 			}
 		}
 	}, );  
+</script>  
+
+<script type="module" >
+	document.addEventListener('astro:page-load', () => {
+		
+	
+                
+	}, );  
 </script>
+

@@ -18,13 +18,25 @@
   },
   {
     "name": "Services",
-    "url": "/fhg/sg/",
+    "url": "#",
     "status" : "active",
     "submenu": [
       {
         "name": "GP",
         "url": "/fhg/sg/primary-care",
-        "status" : "active"
+        "status" : "active",
+        "submenu": [
+          {
+            "name": "Healthcare Screening",
+            "url": "/fhg/sg/executive-health-screening",
+            "status" : "active"
+          },
+          {
+            "name": "MASTERCARD PACKAGES",
+            "url": "/fhg/sg/mastercard",
+            "status" : "active"
+          }
+        ]
       },
       {
         "name": "Specialty Care",
@@ -34,12 +46,46 @@
       {
         "name": "Migrant Worker Care",
         "url": "#",
-        "status" : "active"
+        "status" : "active",
+        "submenu": [
+          {
+            "name": "Primary Care Plan",
+            "url": "/fhg/sg/primary-care-plan",
+            "status" : "active"
+          },
+          {
+            "name": "Onboard Centre",
+            "url": "/fhg/sg/onboard-centre",
+            "status" : "active"
+          }
+        ]
       },
       {
         "name": "Digital Services",
         "url": "#",
-        "status" : "active"
+        "status" : "active",
+        "submenu": [
+          {
+            "name": "Digital Services – Telemedicine",
+            "url": "/fhg/sg/telemedicine",
+            "status" : "active"
+          },
+          {
+            "name": "Tele-ART",
+            "url": "/fhg/sg/tele-art",
+            "status" : "active"
+          },
+          {
+            "name": "Concierge – Mobile App",
+            "url": "/fhg/sg/concierge-app",
+            "status" : "active"
+          },
+          {
+            "name": "LiveFuller – Mobile App",
+            "url": "/fhg/sg/livefuller",
+            "status" : "active"
+          }
+        ]
       },
       {
         "name": "Network Management",
@@ -49,7 +95,29 @@
       {
         "name": "Subsidiaries",
         "url": "#",
-        "status" : "active"
+        "status" : "active",
+        "submenu": [
+          {
+            "name": "Comfort Ambulance",
+            "url": "http://comfortambulance.com/",
+            "status" : "active"
+          },
+          {
+            "name": "RadLink",
+            "url": "https://radlink.com.sg/",
+            "status" : "active"
+          },
+          {
+            "name": "UrbanRehab",
+            "url": "https://urbanrehab.com.sg/",
+            "status" : "active"
+          },
+          {
+            "name": "Orchard Heart Specialist",
+            "url": "https://www.orchardheart.com/",
+            "status" : "active"
+          }
+        ]
       },
       {
         "name": "Covid-19",
@@ -71,7 +139,34 @@
   {
     "name": "News",
     "url": "#",
-    "status" : "active"
+    "status" : "active",
+    "submenu": [
+      {
+        "name": "News & Event",
+        "url": "#",
+        "status" : "active"
+      },
+      {
+        "name": "Press Releases",
+        "url": "#",
+        "status" : "active"
+      },
+      {
+        "name": "Resources",
+        "url": "#",
+        "status" : "active"
+      },
+      {
+        "name": "The Mighty Storm E-Book",
+        "url": "/fhg/sg/the-mighty-storm-ebook",
+        "status" : "active"
+      },
+      {
+        "name": "Mentally Healthier in SG",
+        "url": "/fhg/sg/mentally-healthier-in-sg",
+        "status" : "active"
+      }
+    ]
   },
   {
     "name": "Career",

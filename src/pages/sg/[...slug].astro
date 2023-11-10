@@ -21,6 +21,8 @@ export async function getStaticPaths() {
     {params: {slug: 'livefuller'}},
     {params: {slug: 'awards-accolades'}},
     {params: {slug: 'who-we-are'}},
+    {params: {slug: 'network-management'}},
+    {params: {slug: 'management-team'}},
     {params: {slug: 'management-team'}},
   ];
 }
@@ -30,5 +32,6 @@ let res = await fetch(`https://www.fullertonhealth.com/sg/wp-json/wp/v2/pages?sl
 let [post] = await res.json();
 ---
 <Layout title={`${post.title.rendered}`} meta_description={`${post.yoast_head_json.description}` } body_class={`wp-page ${post.slug}` }>
-  <Fragment set:html={post.content.rendered} />
+    <Fragment set:html={post.content.rendered} />
+
 </Layout>
