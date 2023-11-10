@@ -87,7 +87,7 @@ header .content__container.container-header{
     position: relative;
   }
   nav ul li.has-submenu .sub-menu {
-    display: flex;
+    display: none;
     flex-direction: column;
     opacity: 0;
     height: 0;
@@ -102,6 +102,7 @@ header .content__container.container-header{
   nav ul li.has-submenu:hover .sub-menu  {
     height: auto;
     opacity: 1;
+    display: flex;
   }
   nav ul li.has-submenu .sub-menu li a {
     margin: 0;
