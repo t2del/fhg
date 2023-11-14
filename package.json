@@ -16,8 +16,5 @@
     "bootstrap": "^5.3.2",
     "font-awesome": "^4.7.0",
     "less": "^4.2.0"
-  },
-  "devDependencies": {
-    "@astrojs/partytown": "^2.0.2"
   }
 }
