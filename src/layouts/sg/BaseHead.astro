@@ -40,6 +40,8 @@ const { title, description, image = '/favicon.ico' } = Astro.props;
 <meta property="twitter:description" content={description} />
 <meta property="twitter:image" content={new URL(image, Astro.url)} />
 
+
+
 <script type="module" >
 	//document.addEventListener('astro:page-load', () => {
 	   	const obeserver = new IntersectionObserver((entries) => {
@@ -81,8 +83,11 @@ const { title, description, image = '/favicon.ico' } = Astro.props;
 	//}, );  
 </script>
 <!-- head -->
-<script  type="text/partytown"  src="https://www.googletagmanager.com/gtag/js?id=G-8GWLGV29V7"></script>
-<script type="text/partytown">
+
+<script is:inline src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+
+<script is:inline src="https://www.googletagmanager.com/gtag/js?id=G-8GWLGV29V7"></script>
+<script is:inline >
   window.dataLayer = window.dataLayer || [];
   function gtag() {
     dataLayer.push(arguments);
@@ -90,4 +95,3 @@ const { title, description, image = '/favicon.ico' } = Astro.props;
   gtag("js", new Date());
   gtag("config", "G-8GWLGV29V7");
 </script>
-<!-- more head -->

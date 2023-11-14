@@ -1,0 +1,17 @@
+---
+const { 
+  title = 'Welcome, world!', 
+  delay,
+  togo
+} = Astro.props;
+---
+<span class="counter">{delay} {togo} {title}</span>
+
+<script is:inline>
+    $(document).ready(function() {
+    //   $('.counter').counterUp({
+    //     delay: 10, // Delay in milliseconds between each number change
+    //     time: 1000 // Time in milliseconds for the counting animation
+    //   });
+    });
+</script>

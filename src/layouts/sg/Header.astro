@@ -41,10 +41,12 @@ import menuData from '../../data/menuSG.json';
                               <a href={subSubmenuItem.url}>{subSubmenuItem.name}</a>
                             </li>
                           ))}
+                            <li class="back"><a href="#">Back</a></li>
                         </ul>
                       )}
-                    </li>
+                    </li>                    
                   ))}
+                  <li class="back"><a href="#">Back</a></li>
                 </ul>
               )}
             </li>
@@ -59,3 +61,19 @@ import menuData from '../../data/menuSG.json';
   </div>
 </Container>
 </header>
+
+<script is:inline >
+	$(document).ready(function() {
+		size = $(document).width();
+		$('#navHeader nav ul li.has-submenu > a').on('click', function(e) {
+			e.preventDefault();
+			if(size <= 991){
+				$(this).next('ul').addClass('open-sub');
+			}
+		});
+		$('#navHeader nav ul li.has-submenu .back').on('click', function(e) {
+			e.preventDefault();
+			$(this).parent('ul').removeClass('open-sub');
+		});
+	});
+</script>

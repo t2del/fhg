@@ -42,12 +42,15 @@ const { title, description, image = '/favicon.ico' } = Astro.props;
 <meta property="twitter:image" content={new URL(image, Astro.url)} />
 
 <script is:inline src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
-<script type="module" >
-	document.addEventListener('astro:page-load', () => {
-		// <!-- paste GA4 Tracking here -->
-		console.log('paste GA4 Tracking here ');
-		// <!-- paste GA4 Tracking here -->
-	}, ); 
+
+<script is:inline src="https://www.googletagmanager.com/gtag/js?id=G-8GWLGV29V7"></script>
+<script is:inline >
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag("js", new Date());
+  gtag("config", "G-8GWLGV29V7");
 </script>
 
 <script type="module" >
