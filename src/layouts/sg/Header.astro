@@ -61,19 +61,3 @@ import menuData from '../../data/menuSG.json';
   </div>
 </Container>
 </header>
-
-<script is:inline >
-	$(document).ready(function() {
-		size = $(document).width();
-		$('#navHeader nav ul li.has-submenu > a').on('click', function(e) {
-			e.preventDefault();
-			if(size <= 991){
-				$(this).next('ul').addClass('open-sub');
-			}
-		});
-		$('#navHeader nav ul li.has-submenu .back').on('click', function(e) {
-			e.preventDefault();
-			$(this).parent('ul').removeClass('open-sub');
-		});
-	});
-</script>

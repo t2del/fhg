@@ -259,6 +259,9 @@ header .content__container.container-header{
               }
             }
           }
+          &.back {
+            display: none;
+          }
         }
       }
     }
@@ -301,32 +304,44 @@ body {
         align-items: start;
         flex-direction: column;
         ul {
-          align-items: start;
+          // align-items: start;
           flex-direction: column;
           gap: 0;
           width: 100%;
           li {
-            display: block;
+            display: contents;
             width: 100%;
             text-align: left !important;
             a {
               display: block;
+              width: 100%;
               padding: 10px 10px;
             }
             &.has-submenu {
+              position: relative;
               &:hover .sub-menu-1 {
-                position: relative;
-                box-shadow: none;
-                border-radius: 0;
-                margin-left: 10px;
+                display: unset;
                 li.has-submenu:hover .sub-menu-2 {
-                  position: relative;
-                  box-shadow: none;
-                  border-radius: 0;
-                  left: 0;
-                  margin-left: 10px;
+                  display: unset;
+                }
+              }              
+              .sub-menu {
+                left: 100%;
+                transition: all 0.3s ease-in;
+                height: 100%;
+                background: #fff;
+                z-index: 107;
+                top: 0;
+                
+                &.open-sub {
+                  left: 0% !important;
+                  opacity: 1 !important;
                 }
               }
+            }
+            
+            &.back {
+              display: block;
             }
           }
         }
