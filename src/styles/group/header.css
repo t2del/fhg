@@ -89,6 +89,9 @@ header nav ul li.has-submenu:hover .sub-menu-1 li.has-submenu:hover .sub-menu-2 
 header nav ul li.back {
   display: none;
 }
+header nav ul li:last-child .sub-menu-1 .sub-menu {
+  left: -100% !important;
+}
 body {
   left: 0;
   transition: all 0.3s ease-in-out;

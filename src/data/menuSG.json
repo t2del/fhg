@@ -6,12 +6,12 @@
     "submenu": [
       {
         "name": "Who We Are",
-        "url": "/fhg/sg/who-we-are",
+        "url": "who-we-are",
         "status" : "active"
       },
       {
         "name": "Awards & Accolades",
-        "url": "/fhg/sg/awards-accolades",
+        "url": "awards-accolades",
         "status" : "active"
       }
     ]
@@ -23,24 +23,24 @@
     "submenu": [
       {
         "name": "GP",
-        "url": "/fhg/sg/primary-care",
+        "url": "primary-care",
         "status" : "active",
         "submenu": [
           {
             "name": "Healthcare Screening",
-            "url": "/fhg/sg/executive-health-screening",
+            "url": "executive-health-screening",
             "status" : "active"
           },
           {
             "name": "MASTERCARD PACKAGES",
-            "url": "/fhg/sg/mastercard",
+            "url": "mastercard",
             "status" : "active"
           }
         ]
       },
       {
         "name": "Specialty Care",
-        "url": "/fhg/sg/specialty-care",
+        "url": "specialty-care",
         "status" : "active"
       },
       {
@@ -50,12 +50,12 @@
         "submenu": [
           {
             "name": "Primary Care Plan",
-            "url": "/fhg/sg/primary-care-plan",
+            "url": "primary-care-plan",
             "status" : "active"
           },
           {
             "name": "Onboard Centre",
-            "url": "/fhg/sg/onboard-centre",
+            "url": "onboard-centre",
             "status" : "active"
           }
         ]
@@ -67,29 +67,29 @@
         "submenu": [
           {
             "name": "Digital Services – Telemedicine",
-            "url": "/fhg/sg/telemedicine",
+            "url": "telemedicine",
             "status" : "active"
           },
           {
             "name": "Tele-ART",
-            "url": "/fhg/sg/tele-art",
+            "url": "tele-art",
             "status" : "active"
           },
           {
             "name": "Concierge – Mobile App",
-            "url": "/fhg/sg/concierge-app",
+            "url": "concierge-app",
             "status" : "active"
           },
           {
             "name": "LiveFuller – Mobile App",
-            "url": "/fhg/sg/livefuller",
+            "url": "livefuller",
             "status" : "active"
           }
         ]
       },
       {
         "name": "Network Management",
-        "url": "/fhg/sg/network-management",
+        "url": "network-management",
         "status" : "active"
       },
       {
@@ -128,12 +128,12 @@
   },
   {
     "name": "Healthcare Screening",
-    "url": "/fhg/sg/executive-health-screening",
+    "url": "executive-health-screening",
     "status" : "active"
   },
   {
     "name": "Healthier SG",
-    "url": "/fhg/sg/healthier-sg",
+    "url": "healthier-sg",
     "status" : "active"
   },
   {
@@ -158,19 +158,19 @@
       },
       {
         "name": "The Mighty Storm E-Book",
-        "url": "/fhg/sg/the-mighty-storm-ebook",
+        "url": "the-mighty-storm-ebook",
         "status" : "active"
       },
       {
         "name": "Mentally Healthier in SG",
-        "url": "/fhg/sg/mentally-healthier-in-sg",
+        "url": "mentally-healthier-in-sg",
         "status" : "active"
       }
     ]
   },
   {
     "name": "Career",
-    "url": "/fhg/sg/careers",
+    "url": "careers",
     "status" : "active"
   },
   {
@@ -180,12 +180,12 @@
     "submenu": [
       {
         "name": "Contact Us",
-        "url": "/fhg/sg/contact-us",
+        "url": "contact-us",
         "status" : "active"
       },
       {
         "name": "Locate a Clinic",
-        "url": "/fhg/sg/locate-a-clinic",
+        "url": "locate-a-clinic",
         "status" : "active"
       }
     ]
@@ -202,7 +202,7 @@
         },
         {
           "name": "Singapore",
-          "url": "/fhg/sg/",
+          "url": "",
           "status" : "active"
         }
       ]
