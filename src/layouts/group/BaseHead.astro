@@ -1,5 +1,5 @@
 ---
-import { ViewTransitions } from 'astro:transitions';
+// import { ViewTransitions } from 'astro:transitions';
 
 interface Props {
 	title: string;
@@ -10,7 +10,6 @@ interface Props {
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 const { title, description, image = '/favicon.ico' } = Astro.props;
 ---
-<ViewTransitions></ViewTransitions>
 
 <!-- Global Metadata -->
 <meta charset="utf-8" />
@@ -54,7 +53,7 @@ const { title, description, image = '/favicon.ico' } = Astro.props;
 </script>
 
 <script type="module" >
-	document.addEventListener('astro:page-load', () => {
+	//document.addEventListener('astro:page-load', () => {
 	   const obeserver = new IntersectionObserver((entries) => {
 		entries.forEach((entry) => {
 		  if(entry.isIntersecting) {
@@ -66,11 +65,11 @@ const { title, description, image = '/favicon.ico' } = Astro.props;
 	  });
 	  const hiddenElements = document.querySelectorAll('.notshow');
 	  hiddenElements.forEach((el) => obeserver.observe(el));
-	}, );  
+	//}, );  
 </script>  
 
 <script type="module" >
-	document.addEventListener('astro:page-load', () => {
+	//document.addEventListener('astro:page-load', () => {
 		const menuButton = document.querySelector('#menuButton')
 		const navHeader = document.querySelector('#navHeader');
 		const menuButtonIconHam = document.querySelector('#menuButtonIconHam');
@@ -91,5 +90,5 @@ const { title, description, image = '/favicon.ico' } = Astro.props;
 				navHeader.toggleAttribute('mobile-menu-open');
 			}
 		}
-	}, );  
+	//}, );  
 </script>
