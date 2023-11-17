@@ -6,49 +6,49 @@
     "submenu": [
       {
         "name": "Who we are",
-        "url": "/fhg/about-us",
+        "url": "about-us",
         "status" : "active"
       },
       {
         "name": "What We Do",
-        "url": "/fhg/what-we-do",
+        "url": "what-we-do",
         "status" : "active"
       },
       {
         "name": "Our Purpose and Shared values",
-        "url": "/fhg/our-purpose-and-shared-values",
+        "url": "our-purpose-and-shared-values",
         "status" : "active"
       },
       {
         "name": "Management team",
-        "url": "/fhg/management-team",
+        "url": "management-team",
         "status" : "active"
       },
       {
         "name": "BOARD OF DIRECTORS",
-        "url": "/fhg/board-of-directors",
+        "url": "board-of-directors",
         "status" : "active"
       },
       {
         "name": "Our Milestone",
-        "url": "/fhg/our-milestones",
+        "url": "our-milestones",
         "status" : "active"
       }    
     ]
   },
   {
     "name": "community",
-    "url": "/fhg/community",
+    "url": "community",
     "status" : "active"
   },
   {
     "name": "sustainability",
-    "url": "/fhg/sustainability",
+    "url": "sustainability",
     "status" : "active"
   },
   {
     "name": "contact us",
-    "url": "/fhg/contact-us",
+    "url": "contact-us",
     "status" : "active"
   },
   {
@@ -58,12 +58,12 @@
       "submenu": [
         {
           "name": "Singapore",
-          "url": "/fhg/sg/",
+          "url": "sg/",
           "status" : "active"
         },
         {
           "name": "Philippines",
-          "url": "/fhg/sg/",
+          "url": "sg/",
           "status" : "active",
           "submenu": [
             {
