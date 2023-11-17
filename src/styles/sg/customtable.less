@@ -1,0 +1,197 @@
+.wp-page #customtable  {
+    
+}
+.wp-page #customtable  section {
+    padding: 5px 10px;
+}  
+
+.wp-page #customtable  .text-center {
+    text-align: center;
+} 
+.wp-page #customtable  .table-container {
+    display: flex;
+    margin-right: auto;
+    margin-left: auto;
+    position: relative;
+    border-radius: 10px;
+    box-shadow:0px 3px 10px 0px rgba(0,0,0,0.5);
+}
+.wp-page #customtable  .border-bottom {
+    border-bottom: 1px solid #ccc;
+}
+.wp-page #customtable  .border-right {
+    border-right: 1px solid #ccc;
+}
+.wp-page #customtable  .col-height-70 {
+    height: 70px;
+}
+.wp-page #customtable  .col-height-50 {
+    height: 50px;
+}
+.wp-page #customtable  .col-height-40 {
+    height: 40px;
+}
+.wp-page #customtable  .table-container .ischeck .check {
+    display: inline-block;
+    transform: rotate(45deg);
+    height: 24px;
+    width: 12px;
+    border-bottom: 5px solid var(--e-global-color-secondary );
+    border-right: 5px solid var(--e-global-color-secondary );
+    position: absolute;
+    left: 50%;
+}  
+.wp-page #customtable  .table-container .list-text {
+    color: #ccc;
+    font-size: 16px;
+}
+
+.wp-page #customtable  .table-container h2 {
+    color: #ccc;
+    font-family: "Effra", Helvetica, Sans-serif;
+    font-size: 26px;
+    font-weight: 600;
+    /* letter-spacing: 2px; */
+    text-align: center;
+    line-height: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+.wp-page #customtable  .tc-width-40 {
+    width: 40%;
+}
+.wp-page #customtable  .tc-width-15 {
+    width: 15%;
+}
+.wp-page #customtable  .flex {
+    display: flex;
+    align-items: center;
+}
+.wp-page #customtable  .flex.text-center {
+    justify-content: center;
+}
+.wp-page #customtable  .relative {
+    position: relative;
+}
+.wp-page #customtable  .plan-container .list-text {
+    cursor: pointer;
+}
+.wp-page #customtable  .plan-container .details {
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px #ccc;
+    opacity: 0;    
+    position: absolute !important;
+    left: 0;
+    top: 40px;
+    background: #fff;
+    z-index: -999;
+    height: 0;
+    width: 90% !important;
+    transition: all 300ms ease-in;
+    animation: all 300ms ease-in;
+}
+.wp-page #customtable  .plan-container .details ul li {
+    margin: 10px 0;
+}
+.wp-page #customtable  .plan-container:hover .details, .wp-page #customtable  .plan-container:focus .details {
+    z-index: 999;
+    opacity: 1;
+    height: auto;
+}
+.wp-page #customtable  .plan-container .elementor-icon-list-icon {
+    transition: all 300ms ease-in;
+}
+.wp-page #customtable  .plan-container:hover .elementor-icon-list-icon, .wp-page #customtable  .plan-container:focus .elementor-icon-list-icon {
+    transform: rotate(-90deg);
+}
+.wp-page #customtable  .plan-container .tooltip, .wp-page #customtable  .has-tooltip .sub-tooltip {
+    padding: 10px 5px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px #ccc;
+    opacity: 0;    
+    position: absolute !important;
+    left: 0;
+    top: 40px;
+    background: var(--e-global-color-primary);
+    color: white;
+    z-index: -999;
+    height: 0;
+    width: 330px !important;
+    transition: all 300ms ease-in;
+    animation: all 300ms ease-in;
+    font-size: 16px;
+    text-align: center;
+}
+.wp-page #customtable  .plan-container:hover .tooltip, .wp-page #customtable  .plan-container:focus .tooltip, .wp-page #customtable  .has-tooltip:hover .sub-tooltip, .wp-page #customtable  .has-tooltip:focus .sub-tooltip  {
+    z-index: 999;
+    opacity: 1;
+    height: auto;
+}
+.wp-page #customtable  .visible-mobile {
+    display: none;
+}
+.wp-page #customtable  .plan-scale-up:hover {
+    margin: -2px 0;
+    z-index: 1;
+    border: 1px solid #ccc !important;
+    background: #fff;
+    transform: scale(1.1);
+}
+
+@media (max-width: 1024px) {
+    .wp-page #customtable  section {
+        padding: 5px;
+    }
+}
+
+@media (max-width: 991px) {
+    .wp-page #customtable  .table-container .list-text {
+        font-size: 14px;
+    }
+    .wp-page #customtable  .table-container h2 {
+        font-size: 20px;
+    }
+}
+
+@media(max-width: 767px) {
+    .wp-page #customtable  .table-container {
+        flex-direction: column;
+        max-width: 500px;
+        border-radius: 0;
+        box-shadow: none;
+    }
+    .wp-page #customtable  .table-container .package-details {
+        display: none !important; 
+    }
+    
+    .wp-page #customtable  .tc-width-15 {
+        width:100%;
+    }
+    .wp-page #customtable  .package-name {
+        border: 1px solid #000;
+        margin: 20px 0;
+    }
+
+    .wp-page #customtable  .plan-scale-up:hover {
+        transform: none;
+    }
+    .wp-page #customtable  .visible-desktop {
+        display: none;
+    }
+
+    .wp-page #customtable  .visible-mobile {
+        display: block;
+    }
+    .wp-page #customtable  .elementor-widget-container {
+        padding: 10px 15px;
+    }
+    .wp-page #customtable  .table-container .list-text {
+        font-size: 18px;
+    }
+    .wp-page #customtable  .table-container ul li {
+        color: #ccc;
+    }
+    
+}

@@ -6,49 +6,58 @@
     "submenu": [
       {
         "name": "Who we are",
-        "url": "about-us",
+        "url": "/fhg/about-us",
+        "slug": "about-us",
         "status" : "active"
       },
       {
         "name": "What We Do",
-        "url": "what-we-do",
+        "url": "/fhg/what-we-do",
+        "slug": "what-we-do",
         "status" : "active"
       },
       {
         "name": "Our Purpose and Shared values",
-        "url": "our-purpose-and-shared-values",
+        "url": "/fhg/our-purpose-and-shared-values",
+        "slug": "our-purpose-and-shared-values",
         "status" : "active"
       },
       {
         "name": "Management team",
-        "url": "management-team",
+        "url": "/fhg/management-team",
+        "slug": "management-team",
         "status" : "active"
       },
       {
         "name": "BOARD OF DIRECTORS",
-        "url": "board-of-directors",
+        "url": "/fhg/board-of-directors",
+        "slug": "board-of-directors",
         "status" : "active"
       },
       {
         "name": "Our Milestone",
-        "url": "our-milestones",
+        "url": "/fhg/our-milestones",
+        "slug": "our-milestones",
         "status" : "active"
       }    
     ]
   },
   {
     "name": "community",
-    "url": "community",
+    "url": "/fhg/community",
+    "slug": "community",
     "status" : "active"
   },
   {
     "name": "sustainability",
-    "url": "sustainability",
+    "url": "/fhg/sustainability",
+    "slug": "sustainability",
     "status" : "active"
   },
   {
     "name": "contact us",
-    "url": "contact-us",
+    "url": "/fhg/contact-us",
+    "slug": "contact-us",
     "status" : "active"
   },
   {
@@ -58,27 +67,32 @@
       "submenu": [
         {
           "name": "Singapore",
-          "url": "sg/",
+          "url": "/fhg/sg/",
+          "slug": "sg",
           "status" : "active"
         },
         {
           "name": "Philippines",
-          "url": "sg/",
+          "url": "/fhg/ph/",
+          "slug": "ph",
           "status" : "active",
           "submenu": [
             {
               "name": "Avega",
               "url": "#",
+              "slug": "#",
               "status" : "active"
             },
             {
               "name": "Intellicare",
               "url": "#",
+              "slug": "#",
               "status" : "active"
             },
             {
               "name": "Aventus",
               "url": "#",
+              "slug": "#",
               "status" : "active"
             }
           ]
