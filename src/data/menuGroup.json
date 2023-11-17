@@ -60,6 +60,28 @@
           "name": "Singapore",
           "url": "/fhg/sg/",
           "status" : "active"
+        },
+        {
+          "name": "Philippines",
+          "url": "/fhg/sg/",
+          "status" : "active",
+          "submenu": [
+            {
+              "name": "Avega",
+              "url": "#",
+              "status" : "active"
+            },
+            {
+              "name": "Intellicare",
+              "url": "#",
+              "status" : "active"
+            },
+            {
+              "name": "Aventus",
+              "url": "#",
+              "status" : "active"
+            }
+          ]
         }
       ]
   }
