@@ -97,7 +97,15 @@ const { title, description, image = '/favicon.ico' } = Astro.props;
 			e.preventDefault();
 			$(this).parent('ul').removeClass('open-sub');
 		});
+		windowSize();
 	});
+	$(window).resize(function(){
+        windowSize();
+    });
+	function windowSize() {        
+        var headerheight = $('#navHeader').height();
+        $('.main').css({'margin-top': headerheight + 'px' });
+  	};
 </script>
 
 <script is:inline src="https://www.googletagmanager.com/gtag/js?id=G-8GWLGV29V7"></script>

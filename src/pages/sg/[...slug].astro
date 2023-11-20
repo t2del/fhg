@@ -23,7 +23,8 @@ export async function getStaticPaths() {
     {params: {slug: 'who-we-are'}},
     {params: {slug: 'network-management'}},
     {params: {slug: 'management-team'}},
-    {params: {slug: 'management-team'}},
+    {params: {slug: 'book-an-appointment'}},
+    {params: {slug: 'privacy-policy'}},    
   ];
 }
 
@@ -32,6 +33,5 @@ let res = await fetch(`https://fhgsg.instawp.xyz/wp-json/wp/v2/pages?slug=${slug
 let [post] = await res.json();
 ---
 <Layout title={`${post.title.rendered}`} meta_description={`${post.yoast_head_json.description}` } body_class={`wp-page ${post.slug}` }>
-    <Fragment set:html={post.content.rendered} />
-
+  <div class="main" set:html={post.content.rendered} ></div>
 </Layout>
