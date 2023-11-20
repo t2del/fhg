@@ -1,9 +1,74 @@
 ---
 import { Icon } from 'astro-icon'
 import Container from '../../components/Container.astro';
-import menuData from '../../data/menuGroup.json';
+import menuData from '../../data/menuGroupHeader.json';
 const { slug } = Astro.params;
 ---
+<script type="module" >
+	//document.addEventListener('astro:page-load', () => {
+	   	const obeserver = new IntersectionObserver((entries) => {
+		entries.forEach((entry) => {
+		  	if(entry.isIntersecting) {
+				entry.target.classList.add('show');
+		  	} else {
+				entry.target.classList.remove('show');
+		  	}
+			});
+		});
+		const hiddenElements = document.querySelectorAll('.notshow');
+		hiddenElements.forEach((el) => obeserver.observe(el));
+
+	  	const menuButton = document.querySelector('#menuButton');
+		const body = document.querySelector('body');
+		const navHeader = document.querySelector('#navHeader');
+		const menuButtonIconHam = document.querySelector('#menuButtonIconHam');
+		const menuButtonIconClose = document.querySelector('#menuButtonIconClose');
+
+		if (menuButton) {
+			menuButton.addEventListener('click', toggleMenu);
+		}
+		
+		function toggleMenu() {
+			if (menuButtonIconHam) {
+				menuButtonIconHam.toggleAttribute('hidden');
+			}
+			if (menuButtonIconClose) {
+				menuButtonIconClose.toggleAttribute('hidden');
+			}
+			if (body) {
+				body.toggleAttribute('mobile-menu-open');
+			}
+			if (navHeader) {
+				navHeader.toggleAttribute('mobile-menu-open');
+			}
+		}
+	//}, );  
+</script>
+<script is:inline src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+<script is:inline >
+	$(document).ready(function() {
+		size = $(document).width();
+		$('#navHeader nav ul li.has-submenu > a').on('click', function(e) {
+			e.preventDefault();
+			if(size <= 991){
+				$(this).next('ul').addClass('open-sub');
+			}
+		});
+		$('#navHeader nav ul li.has-submenu .back').on('click', function(e) {
+			e.preventDefault();
+			$(this).parent('ul').removeClass('open-sub');
+		});
+		windowSize();
+	});
+
+	$(window).resize(function(){
+        windowSize();
+    });
+	function windowSize() {        
+        var headerheight = $('#navHeader').height();
+        $('.main').css({'margin-top': headerheight + 'px' });
+    };
+</script>
 <header id="navHeader" class="header--right white-bg">
   <Container className="container-header">
   <div class="header-logo-menu__container">

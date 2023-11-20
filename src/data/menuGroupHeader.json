@@ -43,6 +43,37 @@
     ]
   },
   {
+    "name": "News",
+    "url": "#",
+    "status" : "active",
+    "submenu": [
+      {
+        "name": "News & Events",
+        "url": "/fhg/category/fh-news-events",
+        "slug": "fh-news-events",
+        "status" : "active"
+      },
+      {
+        "name": "Press Releases",
+        "url": "/fhg/category/fh-press-releases",
+        "slug": "fh-press-releases",
+        "status" : "active"
+      },
+      {
+        "name": "Resources",
+        "url": "/fhg/category/fh-resources",
+        "slug": "fh-resources",
+        "status" : "active"
+      },
+      {
+        "name": "Improving Digitalisation",
+        "url": "/fhg/digital",
+        "slug": "digital",
+        "status" : "active"
+      }
+    ]
+  },
+  {
     "name": "community",
     "url": "/fhg/community",
     "slug": "community",
@@ -93,6 +124,26 @@
               "name": "Aventus",
               "url": "#",
               "slug": "#",
+              "status" : "active"
+            }
+          ]
+        },
+        {
+          "name": "Indonesia",
+          "url": "https://www.fullertonhealth.co.id/",
+          "slug": "id",
+          "status" : "active"
+        },
+        {
+          "name": "Malaysia",
+          "url": "#",
+          "slug": "my",
+          "status" : "active",
+          "submenu": [
+            {
+              "name": "IHPMY",
+              "url": "https://www.ihpmy.com/",
+              "slug": "ihpmy",
               "status" : "active"
             }
           ]

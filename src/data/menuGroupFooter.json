@@ -1,0 +1,86 @@
+[
+  {
+    "name": "Contact Us",
+    "url": "#",
+    "status" : "active",
+    "slug": "#",
+    "submenu": [
+      {
+        "name": "Online Enquiry",
+        "url": "/fhg/contact-us",
+        "slug": "contact-us",
+        "status" : "active"
+      }
+    ]
+  },
+  {
+    "name": "About Us",
+    "url": "#",
+    "status" : "active",
+    "slug": "#",
+    "submenu": [
+      {
+        "name": "Our Purpose and Shared values",
+        "url": "/fhg/our-purpose-and-shared-values",
+        "slug": "our-purpose-and-shared-values",
+        "status" : "active"
+      },
+      {
+        "name": "BOARD OF DIRECTORS",
+        "url": "/fhg/board-of-directors",
+        "slug": "board-of-directors",
+        "status" : "active"
+      },
+      {
+        "name": "Management team",
+        "url": "/fhg/management-team",
+        "slug": "management-team",
+        "status" : "active"
+      },
+      {
+        "name": "Milestone",
+        "url": "/fhg/our-milestone",
+        "slug": "our-milestone",
+        "status" : "active"
+      },
+      {
+        "name": "Privacy Policy",
+        "url": "/fhg/privacy-policy",
+        "slug": "privacy-policy",
+        "status" : "active"
+      }  
+    ]
+  },
+  {
+    "name": "SUBSIDIARIES",
+    "url": "#",
+    "status" : "active",
+    "slug": "#",
+    "submenu": [
+      {
+        "name": "Comfort Ambulance",
+        "url": "http://comfortambulance.com/",
+        "slug": "#",
+        "status" : "active"
+      },
+      {
+        "name": "Radlink",
+        "url": "https://radlink.com.sg/",
+        "slug": "#",
+        "status" : "active"
+      },
+      {
+        "name": "UrbanRehab",
+        "url": "https://urbanrehab.com.sg/",
+        "slug": "#",
+        "status" : "active"
+      },
+      {
+        "name": " Orchard Heart Specialist",
+        "url": "https://www.orchardheart.com/",
+        "slug": "#",
+        "status" : "active"
+      }
+    ]
+  }
+]
