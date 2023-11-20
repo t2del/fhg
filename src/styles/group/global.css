@@ -294,19 +294,7 @@ h2 {
 .instructions strong {
   color: rgb(var(--accent-light));
 }
-.link-card-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-  gap: 2rem;
-  padding: 0;
-}
-.link-card-grid.featured {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-.link-card-grid.grid-3 {
-  grid-template-columns: repeat(auto-fit, minmax(28ch, 1fr));
-}
+
 nav.pagination-blog {
   justify-content: space-between;
 }

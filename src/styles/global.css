@@ -43,6 +43,22 @@ span {
 section {
   overflow: hidden;
 }
+.main {
+  padding-bottom: 150px;
+}
+.link-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+  gap: 2rem;
+  padding: 0;
+}
+.link-card-grid.featured {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.link-card-grid.grid-3 {
+  grid-template-columns: repeat(auto-fit, minmax(28ch, 1fr));
+}
 .boxes {
   padding: 10px 10px;
   margin-bottom: 20px;
@@ -69,9 +85,6 @@ section {
   height: 100%;
   position: relative;
   object-fit: cover;
-}
-.boxes .box:hover .image {
-  opacity: 0.8;
 }
 .boxes .box .info {
   width: 60%;
@@ -109,6 +122,6 @@ section {
   line-height: 30px;
   word-spacing: 5px;
 }
-.main {
-  padding-bottom: 150px;
+.boxes .box:hover .image {
+  opacity: 0.8;
 }
