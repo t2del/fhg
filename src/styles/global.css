@@ -42,11 +42,18 @@ span {
 }
 section {
   overflow: hidden;
+  padding: 40px 0;
 }
 .main {
   padding-bottom: 150px;
 }
 .link-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+  gap: 2rem;
+  padding: 0;
+}
+.link-card-grid .elementor-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
   gap: 2rem;
@@ -124,4 +131,16 @@ section {
 }
 .boxes .box:hover .image {
   opacity: 0.8;
+}
+.w1400 {
+  margin: 0 auto;
+  max-width: 1440px;
+}
+.w1200 {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+.w900 {
+  margin: 0 auto;
+  max-width: 900px;
 }
