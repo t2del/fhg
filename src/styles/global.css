@@ -44,6 +44,9 @@ section {
   overflow: hidden;
   padding: 40px 0;
 }
+section:first-child {
+  padding: 0;
+}
 .main {
   padding-bottom: 150px;
 }
