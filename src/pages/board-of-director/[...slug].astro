@@ -18,5 +18,5 @@ let res = await fetch(`https://fhggroup.instawp.xyz/wp-json/wp/v2/board-of-direc
 let [post] = await res.json();
 ---
 <Layout title={`${post.title.rendered} | Fullerton Health`} meta_description={`${post.yoast_head_json.description}` } body_class={`wp-page board-of-director ${post.slug} team-inner` }>
-  <Fragment set:html={post.content.rendered} />
+  <div class="main" set:html={post.content.rendered} ></div>
 </Layout>
