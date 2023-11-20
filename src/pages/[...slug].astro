@@ -18,7 +18,7 @@ export async function getStaticPaths() {
     {params: {slug: 'privacy-policy'}},        
   ];
 }
-//https://www.fullertonhealth.com/wp-json/wp/v2/management-team?slugho-kuen-loon
+
 const { slug } = Astro.params;
 let res = await fetch(`https://fhggroup.instawp.xyz/wp-json/wp/v2/pages?slug=${slug}`);
 let [post] = await res.json();
