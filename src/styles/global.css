@@ -147,8 +147,23 @@ section:first-child {
   margin: 0 auto;
   max-width: 900px;
 }
+.astro-banner {
+  height: 400px;
+}
+.astro-banner img {
+  height: 400px;
+  object-fit: cover;
+  object-position: center center;
+  filter: brightness(50%) contrast(100%) saturate(100%) blur(0) hue-rotate(0deg);
+}
 .elementor-element-populated {
   position: relative;
+}
+.elementor-element-populated .astro-heading-absolute {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 .elementor-element-populated .astro-heading-absolute h1,
 .elementor-element-populated .astro-heading-absolute h2,
@@ -156,10 +171,10 @@ section:first-child {
 .elementor-element-populated .astro-heading-absolute h4,
 .elementor-element-populated .astro-heading-absolute h5,
 .elementor-element-populated .astro-heading-absolute h6 {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
   font-family: var(--theme-font-family-sans);
   color: #fff;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
 }
