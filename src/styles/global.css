@@ -147,3 +147,19 @@ section:first-child {
   margin: 0 auto;
   max-width: 900px;
 }
+.elementor-element-populated {
+  position: relative;
+}
+.elementor-element-populated .astro-heading-absolute h1,
+.elementor-element-populated .astro-heading-absolute h2,
+.elementor-element-populated .astro-heading-absolute h3,
+.elementor-element-populated .astro-heading-absolute h4,
+.elementor-element-populated .astro-heading-absolute h5,
+.elementor-element-populated .astro-heading-absolute h6 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-family: var(--theme-font-family-sans);
+  color: #fff;
+}

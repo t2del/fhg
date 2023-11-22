@@ -163,3 +163,17 @@ section {
 	margin: 0 auto;
 	max-width: 900px;
 }
+
+.elementor-element-populated {
+	position: relative;
+	.astro-heading-absolute {
+		h1, h2, h3, h4, h5, h6 {
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			font-family: var(--theme-font-family-sans);
+			color: #fff;
+		}		
+	}
+}
