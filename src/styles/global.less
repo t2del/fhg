@@ -35,11 +35,13 @@ pre .language-id {
 time {
 	font-size: .6rem;
 }
-span {
-	color: #339BEB;
+// span {
+// 	color: #339BEB;
+// }
+
+h1, h2, h3, h4, h5 ,h6, p, div, span {
+	font-family: var(--theme-font-family-effra);
 }
-
-
 
 .hide {
 	display: none !important;
@@ -191,5 +193,33 @@ section {
 		}		
 	}
 }
-
-	
+.astro-height-500 {
+	img {
+		max-height: 500px;
+		object-fit: cover;
+	}
+}
+.astro-height-auto {
+	img {
+		object-fit: cover;
+	}
+}
+.astro-text-center {
+	text-align: center;
+}
+.astro-btn-blue {
+	a {
+		fill: #FFF;
+		color: #FFF;
+		background-color: var(--e-global-color-primary);
+		padding: 10px 20px;
+		border-radius: 10px;
+		display: inline-block;
+	}	
+}
+.align-center {
+	text-align: center;
+	.elementor-button-wrapper {
+		text-align: center;
+	}
+}
