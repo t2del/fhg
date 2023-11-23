@@ -69,6 +69,7 @@ section:first-child {
   grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
   gap: 2rem;
   padding: 0;
+  align-items: center;
 }
 .link-card-grid.featured {
   max-width: 1200px;
@@ -76,6 +77,16 @@ section:first-child {
 }
 .link-card-grid.grid-3 {
   grid-template-columns: repeat(auto-fit, minmax(28ch, 1fr));
+}
+.link-card-grid.grid-6 .elementor-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12ch, 1fr));
+  gap: 1rem;
+}
+.link-card-grid img {
+  max-height: 150px;
+  width: 100%;
+  object-fit: contain;
 }
 .boxes {
   padding: 10px 10px;
@@ -131,6 +142,11 @@ section:first-child {
   background: var(--e-global-color-primary);
   font-size: 16px;
   font-weight: 400;
+  fill: #FFF;
+  color: #FFF;
+  background-color: var(--e-global-color-primary);
+  padding: 10px 20px;
+  border-radius: 10px;
 }
 .boxes .box .info .excerpt {
   margin: 10px 0;
